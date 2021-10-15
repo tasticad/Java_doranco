@@ -1,0 +1,46 @@
+public class Voiture {
+
+    private String marque;
+    private int qtCarburant;
+    private int qtCarburantMax;
+    private Carburant carburant;
+
+    public Voiture(String marque,int qtCarburant,int qtCarburantMax,Carburant carburant){
+        this.marque = marque;
+        this.qtCarburant = qtCarburant;
+        this.qtCarburantMax = qtCarburantMax;
+        this.carburant = carburant;
+    }
+
+    public String getMarque() {
+        return marque;
+    }
+
+    public int getQtCarburant() {
+        return qtCarburant;
+    }
+
+    public int getQtCarburantMax() {
+        return qtCarburantMax;
+    }
+
+    public Carburant getCarburant() {
+        return carburant;
+    }
+
+    public void setMarque(String marque) {
+        this.marque = marque;
+    }
+
+    public void setQtCarburant(int qtCarburant) {
+        this.qtCarburant = qtCarburant;
+    }
+
+    public void setQtCarburantMax(int qtCarburantMax) {
+        this.qtCarburantMax = qtCarburantMax;
+    }
+
+    public void setCarburant(Carburant carburant) {
+        this.carburant = carburant;
+    }
+}
