@@ -6,10 +6,15 @@ public class Menu {
 
     public void menuPrincipal(User user)
     {
-        System.out.println("1:gestion argent");
-        System.out.println("gestion voiture");
-        System.out.println(":");
+        //affichage rubrique centrale
+        rubriqueCentrale();
+        choixCentral(user,choice());
 
+
+    }
+
+    public void choixCentral(User user,int choice)
+    {
         switch (choice()) {
             case 1:
                 monnaie(user);
@@ -17,6 +22,14 @@ public class Menu {
             case 2:
                 cars(user.getVoiture());
                 break;
+        }
+    }
+
+    public void rubriqueCentrale()
+    {
+        String[] menu = {"gestion argent","gestion voiture"};
+        for (int i = 0; i < menu.length;i++) {
+            System.out.println((i+1)+":"+menu[i]);
         }
     }
 
