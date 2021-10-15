@@ -20,7 +20,7 @@ public class Menu {
                 monnaie(user);
                 break;
             case 2:
-                cars(user.getVoiture());
+                cars(user,user.getVoiture());
                 break;
         }
     }
@@ -71,18 +71,19 @@ public class Menu {
     }
 
 
-    public void cars(Voiture voiture)
+    public void cars(User user,Voiture voiture)
     {
         //verification du niveau de carburant
         if (voiture.getQtCarburant() < 50)
         {
             //en dessous de 50 pourcent -> plein
-            System.out.println("1:plein a faire !");
+            System.out.println("1:plein a faire ! niveau = " + voiture.getQtCarburant() + "%");
         }else
         {
             //au dessus de 50 pourcent -> pas de plein
             System.out.println("2:carburant ok");
         }
+        menuPrincipal(user);
     }
 
     public int choice() {
